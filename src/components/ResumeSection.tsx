@@ -102,7 +102,7 @@ const ResumeSection = () => {
         >
           <h3 className="text-2xl font-bold mb-4">My Resume</h3>
           <a 
-            href="#"
+            href="/sample-resume.pdf"
             className="bg-portfolio-purple text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all inline-block"
             download
           >
