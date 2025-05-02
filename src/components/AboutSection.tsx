@@ -1,13 +1,33 @@
 
 import { motion } from "framer-motion";
+import { Code, Layers, Database, Search } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    { name: "Web Developer", icon: "public/lovable-uploads/886b5595-2812-4d9c-afe2-281e94580ad5.png" },
-    { name: "React Native Developer", icon: "public/lovable-uploads/a444911e-9ebc-48dc-8cd6-d8b5a981eb19.png" },
-    { name: "Backend Developer", icon: "public/lovable-uploads/054ce4e3-e6b9-4e4c-aa4a-3f4d03a63acf.png" },
-    { name: "Problem Solver", icon: "public/lovable-uploads/65a20eee-c072-4cac-96df-58aaf08b20d1.png" },
+    { name: "Web Developer", icon: <Code className="w-12 h-12 mb-4 text-portfolio-purple" /> },
+    { name: "React Native Developer", icon: <Layers className="w-12 h-12 mb-4 text-portfolio-purple" /> },
+    { name: "Backend Developer", icon: <Database className="w-12 h-12 mb-4 text-portfolio-purple" /> },
+    { name: "Problem Solver", icon: <Search className="w-12 h-12 mb-4 text-portfolio-purple" /> },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
 
   return (
     <section id="about" className="py-20">
@@ -47,23 +67,20 @@ const AboutSection = () => {
 
           <motion.div 
             className="grid grid-cols-2 gap-6"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
           >
             {skills.map((skill, index) => (
               <motion.div 
                 key={index}
                 className="bg-[#1A1E2E] p-8 rounded-xl flex flex-col items-center text-center hover:border-portfolio-purple border border-transparent transition-all"
+                variants={itemVariants}
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <img 
-                  src={skill.icon} 
-                  alt={skill.name} 
-                  className="w-20 h-20 mb-4 animate-float" 
-                />
+                {skill.icon}
                 <h4 className="text-xl font-medium">{skill.name}</h4>
               </motion.div>
             ))}
