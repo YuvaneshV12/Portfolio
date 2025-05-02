@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import ParticlesBackground from "../components/ParticlesBackground";
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import AboutSection from "../components/AboutSection";
+import AchievementsSection from "../components/AchievementsSection";
+import ResumeSection from "../components/ResumeSection";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 
 const Index = () => {
+  // Change title on mount
+  useEffect(() => {
+    document.title = "Yuvanesh - 3D Portfolio";
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-portfolio-dark text-white overflow-x-hidden">
+      <ParticlesBackground />
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <AchievementsSection />
+      <ResumeSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
