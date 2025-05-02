@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ChevronDown } from "lucide-react";
+import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => {
   return (
@@ -10,14 +11,14 @@ const HeroSection = () => {
       className="min-h-screen flex items-center pt-16"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col md:flex-row items-center justify-between">
           <motion.div 
-            className="text-center max-w-3xl mx-auto"
+            className="text-center md:text-left md:max-w-xl md:flex-1"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center md:justify-start mb-4">
               <motion.div
                 className="h-1 w-6 bg-portfolio-purple mr-4"
                 initial={{ width: 0 }}
@@ -55,7 +56,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="flex flex-col md:flex-row items-center justify-center gap-4"
+              className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4"
             >
               <Link 
                 to="contact" 
@@ -81,28 +82,37 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="mt-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
+            className="hidden md:block md:flex-1 h-[400px] mt-8 md:mt-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
           >
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={800}
-              className="cursor-pointer flex flex-col items-center"
-            >
-              <span className="text-gray-400 mb-2">Scroll Down</span>
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-              >
-                <ChevronDown className="text-portfolio-purple" size={24} />
-              </motion.div>
-            </Link>
+            <Spline scene="https://prod.spline.design/sCJ5DuyVRr7iqUBY/scene.splinecode" />
           </motion.div>
         </div>
+          
+        <motion.div 
+          className="mt-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+        >
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={800}
+            className="cursor-pointer flex flex-col items-center"
+          >
+            <span className="text-gray-400 mb-2">Scroll Down</span>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <ChevronDown className="text-portfolio-purple" size={24} />
+            </motion.div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

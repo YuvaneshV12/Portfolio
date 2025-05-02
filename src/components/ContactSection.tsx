@@ -2,6 +2,7 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import Spline from '@splinetool/react-spline';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -141,14 +142,12 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative h-full">
-              <img 
-                src="/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png" 
-                alt="3D Sphere" 
-                className="w-full h-full object-cover rounded-xl opacity-70"
-              />
+            <div className="relative h-full rounded-xl overflow-hidden bg-[#1A1E2E] border border-gray-700">
+              <div className="w-full h-[400px] md:h-full">
+                <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
+                <div className="text-center p-6 bg-[#0D1320]/70 rounded-xl backdrop-blur-sm">
                   <h3 className="text-2xl font-bold mb-4">Let's work together</h3>
                   <p className="text-gray-300 mb-6">
                     I'm currently available for freelance work or full-time positions.
