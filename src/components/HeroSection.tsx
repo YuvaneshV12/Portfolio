@@ -1,8 +1,12 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import ComputersCanvas from "./ComputerCanvas";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section 
       id="home" 
@@ -79,16 +83,20 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="md:w-2/5 flex justify-center"
+            className="md:w-2/5 flex justify-center h-[350px] md:h-[500px]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <img 
-              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326197.png" 
-              alt="Yuvanesh's Setup" 
-              className="max-w-full h-auto rounded-xl shadow-2xl"
-            />
+            <div className="w-full h-full">
+              {isMobile ? (
+                <div className="w-full h-full flex items-center justify-center text-portfolio-purple">
+                  <p className="text-lg">3D model not available on mobile</p>
+                </div>
+              ) : (
+                <ComputersCanvas />
+              )}
+            </div>
           </motion.div>
         </div>
       </div>
