@@ -1,8 +1,6 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { ChevronDown } from "lucide-react";
-import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => {
   return (
@@ -11,14 +9,14 @@ const HeroSection = () => {
       className="min-h-screen flex items-center pt-16"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col-reverse md:flex-row items-center">
           <motion.div 
-            className="text-center md:text-left md:max-w-xl md:flex-1"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="md:w-3/5 text-center md:text-left mt-8 md:mt-0"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center justify-center md:justify-start mb-4">
+            <div className="flex items-center mb-4">
               <motion.div
                 className="h-1 w-6 bg-portfolio-purple mr-4"
                 initial={{ width: 0 }}
@@ -44,7 +42,7 @@ const HeroSection = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-8"
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -56,7 +54,6 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
-              className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4"
             >
               <Link 
                 to="contact" 
@@ -64,7 +61,7 @@ const HeroSection = () => {
                 smooth={true} 
                 duration={800} 
                 offset={-50}
-                className="bg-portfolio-purple text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block w-full md:w-auto"
+                className="bg-portfolio-purple text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block mr-4"
               >
                 Contact Me
               </Link>
@@ -74,7 +71,7 @@ const HeroSection = () => {
                 smooth={true}
                 duration={800}
                 offset={-50}
-                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-3 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block w-full md:w-auto"
+                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-3 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block mt-4 md:mt-0"
               >
                 View My Work
               </Link>
@@ -82,37 +79,18 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div 
-            className="hidden md:block md:flex-1 h-[400px] mt-8 md:mt-0"
-            initial={{ opacity: 0, scale: 0.9 }}
+            className="md:w-2/5 flex justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
+            transition={{ duration: 0.8 }}
           >
-            <Spline scene="https://prod.spline.design/sCJ5DuyVRr7iqUBY/scene.splinecode" />
+            <img 
+              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326197.png" 
+              alt="Yuvanesh's Setup" 
+              className="max-w-full h-auto rounded-xl shadow-2xl"
+            />
           </motion.div>
         </div>
-          
-        <motion.div 
-          className="mt-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-        >
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={800}
-            className="cursor-pointer flex flex-col items-center"
-          >
-            <span className="text-gray-400 mb-2">Scroll Down</span>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-              <ChevronDown className="text-portfolio-purple" size={24} />
-            </motion.div>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
