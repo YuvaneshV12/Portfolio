@@ -59,8 +59,8 @@ const ResumeSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            <span className="text-portfolio-purple">Work</span> Experience
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">
+            <span className="text-portfolio-purple">Tech</span> Skills
           </h2>
           <div className="h-1 md:h-2 w-20 md:w-24 bg-portfolio-purple mx-auto"></div>
         </motion.div>
@@ -76,16 +76,16 @@ const ResumeSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">{job.title}</h3>
-                <p className="text-gray-400 mb-3 md:mb-4 text-lg md:text-xl">{job.company}</p>
+                <h3 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3">{job.title}</h3>
+                <p className="text-gray-400 mb-3 md:mb-4 text-xl md:text-2xl">{job.company}</p>
                 <div className="flex items-center mb-4 md:mb-6">
-                  <div className="bg-portfolio-purple px-4 py-2 rounded-full text-base md:text-lg">
+                  <div className="bg-portfolio-purple px-4 py-2 rounded-full text-lg md:text-xl">
                     {job.period}
                   </div>
                 </div>
                 <ul className="list-disc pl-5 space-y-2 md:space-y-3">
                   {job.duties.map((duty, dutyIndex) => (
-                    <li key={dutyIndex} className="text-gray-300 text-base md:text-lg">{duty}</li>
+                    <li key={dutyIndex} className="text-gray-300 text-lg md:text-xl">{duty}</li>
                   ))}
                 </ul>
               </div>
@@ -100,7 +100,7 @@ const ResumeSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">My Resume</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">My Resume</h3>
           <a 
             href="#"
             className="bg-portfolio-purple text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl"
@@ -122,17 +122,17 @@ const ResumeSection = () => {
               <button 
                 onClick={goToPrevPage}
                 disabled={pageNumber <= 1}
-                className={`px-4 py-2 md:px-6 md:py-3 rounded text-base md:text-lg ${pageNumber <= 1 ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded text-lg md:text-xl ${pageNumber <= 1 ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
               >
                 Previous
               </button>
-              <p className="text-center text-base md:text-lg flex items-center">
+              <p className="text-center text-lg md:text-xl flex items-center">
                 Page {pageNumber} of {numPages}
               </p>
               <button 
                 onClick={goToNextPage}
                 disabled={pageNumber >= (numPages || 1)}
-                className={`px-4 py-2 md:px-6 md:py-3 rounded text-base md:text-lg ${pageNumber >= (numPages || 1) ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded text-lg md:text-xl ${pageNumber >= (numPages || 1) ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
               >
                 Next
               </button>
@@ -141,8 +141,8 @@ const ResumeSection = () => {
               <Document
                 file="/sample-resume.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
-                loading={<div className="text-center py-10 text-lg md:text-xl">Loading resume...</div>}
-                error={<div className="text-center py-10 text-red-500 text-lg md:text-xl">Failed to load PDF. Please try again later.</div>}
+                loading={<div className="text-center py-10 text-xl md:text-2xl">Loading resume...</div>}
+                error={<div className="text-center py-10 text-red-500 text-xl md:text-2xl">Failed to load PDF. Please try again later.</div>}
               >
                 <Page 
                   pageNumber={pageNumber} 

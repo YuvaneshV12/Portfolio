@@ -42,18 +42,45 @@ const HeroSection = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 md:mb-10 max-w-xl lg:max-w-2xl"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
               I solve programming problems and build modern web pages and applications.
             </motion.p>
+
+            <motion.p 
+              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 md:mb-4 max-w-xl lg:max-w-2xl text-justify"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+            >
+              With expertise in React, TypeScript, and modern frontend frameworks, I create responsive, accessible, and performant user interfaces.
+            </motion.p>
+            
+            <motion.p 
+              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 md:mb-4 max-w-xl lg:max-w-2xl text-justify"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.4, duration: 0.5 }}
+            >
+              I combine clean code principles with creative problem-solving to deliver exceptional digital experiences that exceed client expectations.
+            </motion.p>
+            
+            <motion.p 
+              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-10 max-w-xl lg:max-w-2xl text-justify"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6, duration: 0.5 }}
+            >
+              Passionate about continuous learning, I stay updated with emerging technologies to implement innovative solutions for complex challenges.
+            </motion.p>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
+              transition={{ delay: 1.8, duration: 0.5 }}
               className="flex flex-col md:flex-row gap-4 md:gap-6"
             >
               <Link 
