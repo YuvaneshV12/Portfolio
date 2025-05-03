@@ -10,36 +10,20 @@ interface Achievement {
 const AchievementsSection = () => {
   const achievements: Achievement[] = [
     {
-      title: "Car Rent",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Web-based platform that allows users to search, book, and manage car rentals from various providers."
+      title: "Carbon FootPrint Tracker for Sustainable Living",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22o.png",
+      description: "Developed a web-based Carbon Footprint Tracker that calculates and visualizes users' daily emissions to promote eco-friendly habits."
+    },
+    { 
+      title: "USSD Based Grocery Ordering Application",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22p.jpg",
+      description: "Developed a USSD-based grocery ordering application, enabling users to browse, order, and pay for groceries through simple text commands on feature phones."
     },
     {
-      title: "Job IT",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Web application that enables users to search for job openings, view estimated salaries, and locate available jobs based on their location."
-    },
-    {
-      title: "Trip Guide",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations."
-    },
-    {
-      title: "E-Commerce Platform",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Online shopping platform with customer and admin dashboards, payment integration, and order tracking."
-    },
-    {
-      title: "Fitness App",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Mobile application for workout tracking, nutrition planning, and progress visualization."
-    },
-    {
-      title: "Movie Database",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Web application that provides information about movies, TV shows, and actors using external APIs."
+      title: "Social Volunteering Platform for Community Engagement",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22l.avif",
+      description: "Created a social volunteering platform that connects volunteers with local community projects, allowing users to discover opportunities, sign up, and track their volunteer hours."
     }
-    // Removed the last two project cards as requested
   ];
 
   return (
@@ -86,8 +70,8 @@ const AchievementsSection = () => {
                   <h3 className="text-2xl md:text-3xl font-semibold mb-2 md:mb-3">{achievement.title}</h3>
                   <p className="text-lg md:text-xl text-gray-400">{achievement.description}</p>
                   <div className="mt-4 md:mt-6 flex justify-between">
-                    <a href="#" className="text-lg md:text-xl text-portfolio-purple hover:underline">Code</a>
-                    <a href="#" className="text-lg md:text-xl text-portfolio-cyan hover:underline">Live Demo</a>
+                    <a href="https://github.com/YuvaneshV12" className="text-lg md:text-xl text-portfolio-purple hover:underline">Code</a>
+                    <a href="https://github.com/YuvaneshV12" className="text-lg md:text-xl text-portfolio-cyan hover:underline">Live Demo</a>
                   </div>
                 </div>
               </div>

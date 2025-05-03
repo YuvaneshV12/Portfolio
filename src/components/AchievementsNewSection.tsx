@@ -10,19 +10,19 @@ interface Achievement {
 const AchievementsNewSection = () => {
   const achievements: Achievement[] = [
     {
-      title: "Best Web Design",
+      title: "Solved LeetCode Problems",
       image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Awarded first place for innovative UI/UX design in the National Web Design Competition."
+      description: "Solved LeetCode problems to strengthen data structures and algorithms skills through hands-on coding challenges."
     },
     {
-      title: "Speaker at React Conf",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Featured speaker presenting advanced React patterns and performance optimization techniques."
+      title: "Secured Thrid Price in Code-A-Thon",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22v.jpg",
+      description: "Secured third place in Code-A-Thon by building an innovative and efficient solution under time constraints."
     },
     {
-      title: "Open Source Contributor",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
-      description: "Recognized as a top contributor to several major open-source frontend libraries and frameworks."
+      title: "Earned a Java Completion Certificate",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22i.png",
+      description: "Earned a Java completion certificate by mastering core concepts and building hands-on projects."
     }
   ];
 

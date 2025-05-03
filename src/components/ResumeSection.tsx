@@ -8,13 +8,17 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 // Set the worker for PDF.js
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+const RESUME_PDF_PATH = "/sample-resume.pdf";
+
 const ResumeSection = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageNumber, setPageNumber] = useState<number>(1);
   
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    console.log("Loaded PDF with", numPages, "pages.");
     setNumPages(numPages);
   };
+  
   
   const goToPrevPage = () => {
     setPageNumber(prevPageNumber => Math.max(prevPageNumber - 1, 1));
@@ -24,27 +28,35 @@ const ResumeSection = () => {
     setPageNumber(prevPageNumber => Math.min(prevPageNumber + 1, numPages || 1));
   };
 
+  const handleDownloadCV = () => {
+    // Create an anchor element and set properties for download
+    const link = document.createElement('a');
+    link.href = RESUME_PDF_PATH;
+    link.download = "resume.pdf"; // This sets the download filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const experienceData = [
     {
       title: "React.js Developer",
-      company: "Starbucks",
-      period: "March 2020 - April 2021",
+      company: "",
+      period: "March 2024 - June 2024",
       duties: [
         "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers."
+        "Optimized application performance with lazy loading, code splitting, and reusable component architecture.",
+        "Implementing responsive design and ensuring cross-browser compatibility."
       ]
     },
     {
-      title: "Front-End Developer",
-      company: "Google",
-      period: "May 2021 - Present",
+      title: "Java Developer",
+      company: "",
+      period: "July 2024 - Present",
       duties: [
-        "Building modern, responsive user interfaces for company products",
-        "Working with design team to implement pixel-perfect UI components",
-        "Optimizing applications for maximum speed and scalability",
-        "Maintaining code quality and organization"
+        "Solved 300+ coding problems across platforms like LeetCode, Codeforces, and HackerRank to strengthen algorithmic thinking.",
+        "Specialized in solving problems involving arrays, recursion, dynamic programming, and graph algorithms.",
+        "Regularly participated in coding contests, improving speed and accuracy under timed conditions."
       ]
     }
   ];
@@ -101,13 +113,12 @@ const ResumeSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">My Resume</h3>
-          <a 
-            href="#"
+          <button 
+            onClick={handleDownloadCV}
             className="bg-portfolio-purple text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl"
-            download
           >
             Download CV
-          </a>
+          </button>
         </motion.div>
 
         <motion.div 
@@ -139,7 +150,7 @@ const ResumeSection = () => {
             </div>
             <div className="flex justify-center border border-gray-700 rounded-lg overflow-hidden">
               <Document
-                file="/sample-resume.pdf"
+                file={RESUME_PDF_PATH}
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={<div className="text-center py-10 text-xl md:text-2xl">Loading resume...</div>}
                 error={<div className="text-center py-10 text-red-500 text-xl md:text-2xl">Failed to load PDF. Please try again later.</div>}

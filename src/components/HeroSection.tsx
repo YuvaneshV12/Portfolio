@@ -51,7 +51,7 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.p 
-              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 md:mb-4 max-w-xl lg:max-w-2xl text-justify"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.5 }}
@@ -60,21 +60,12 @@ const HeroSection = () => {
             </motion.p>
             
             <motion.p 
-              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 md:mb-4 max-w-xl lg:max-w-2xl text-justify"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 0.5 }}
             >
               I combine clean code principles with creative problem-solving to deliver exceptional digital experiences that exceed client expectations.
-            </motion.p>
-            
-            <motion.p 
-              className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-10 max-w-xl lg:max-w-2xl text-justify"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6, duration: 0.5 }}
-            >
-              Passionate about continuous learning, I stay updated with emerging technologies to implement innovative solutions for complex challenges.
             </motion.p>
             
             <motion.div
@@ -109,11 +100,11 @@ const HeroSection = () => {
           <motion.div 
             className="md:w-2/5 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.4 }}
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326197.png" 
+              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326198.png" 
               alt="Yuvanesh's Setup" 
               className="max-w-full h-auto rounded-xl shadow-2xl"
             />
