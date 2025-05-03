@@ -50,42 +50,42 @@ const ResumeSection = () => {
   ];
 
   return (
-    <section id="resume" className="py-20">
+    <section id="resume" className="py-20 md:py-28 lg:py-32">
       <div className="container mx-auto px-4">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             <span className="text-portfolio-purple">Work</span> Experience
           </h2>
-          <div className="h-1 w-20 bg-portfolio-purple mx-auto"></div>
+          <div className="h-1 md:h-2 w-20 md:w-24 bg-portfolio-purple mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 mb-16 md:mb-20">
           {experienceData.map((job, index) => (
             <motion.div 
               key={index}
-              className="bg-[#1A1E2E] p-8 rounded-xl relative overflow-hidden border border-gray-800"
+              className="bg-[#1A1E2E] p-8 md:p-10 rounded-xl relative overflow-hidden border border-gray-800"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-2">{job.title}</h3>
-                <p className="text-gray-400 mb-3">{job.company}</p>
-                <div className="flex items-center mb-4">
-                  <div className="bg-portfolio-purple px-3 py-1 rounded-full text-sm">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 md:mb-3">{job.title}</h3>
+                <p className="text-gray-400 mb-3 md:mb-4 text-lg md:text-xl">{job.company}</p>
+                <div className="flex items-center mb-4 md:mb-6">
+                  <div className="bg-portfolio-purple px-4 py-2 rounded-full text-base md:text-lg">
                     {job.period}
                   </div>
                 </div>
-                <ul className="list-disc pl-5 space-y-2">
+                <ul className="list-disc pl-5 space-y-2 md:space-y-3">
                   {job.duties.map((duty, dutyIndex) => (
-                    <li key={dutyIndex} className="text-gray-300">{duty}</li>
+                    <li key={dutyIndex} className="text-gray-300 text-base md:text-lg">{duty}</li>
                   ))}
                 </ul>
               </div>
@@ -94,16 +94,16 @@ const ResumeSection = () => {
         </div>
 
         <motion.div 
-          className="text-center mb-8"
+          className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl font-bold mb-4">My Resume</h3>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">My Resume</h3>
           <a 
             href="#"
-            className="bg-portfolio-purple text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all inline-block"
+            className="bg-portfolio-purple text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl"
             download
           >
             Download CV
@@ -111,28 +111,28 @@ const ResumeSection = () => {
         </motion.div>
 
         <motion.div 
-          className="flex justify-center mt-10"
+          className="flex justify-center mt-10 md:mt-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="bg-[#1A1E2E] p-4 rounded-xl max-w-3xl mx-auto">
-            <div className="flex justify-between mb-4">
+          <div className="bg-[#1A1E2E] p-4 md:p-6 rounded-xl max-w-3xl mx-auto w-full">
+            <div className="flex justify-between mb-4 md:mb-6">
               <button 
                 onClick={goToPrevPage}
                 disabled={pageNumber <= 1}
-                className={`px-4 py-2 rounded ${pageNumber <= 1 ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded text-base md:text-lg ${pageNumber <= 1 ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
               >
                 Previous
               </button>
-              <p className="text-center">
+              <p className="text-center text-base md:text-lg flex items-center">
                 Page {pageNumber} of {numPages}
               </p>
               <button 
                 onClick={goToNextPage}
                 disabled={pageNumber >= (numPages || 1)}
-                className={`px-4 py-2 rounded ${pageNumber >= (numPages || 1) ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
+                className={`px-4 py-2 md:px-6 md:py-3 rounded text-base md:text-lg ${pageNumber >= (numPages || 1) ? 'bg-gray-700 text-gray-400 cursor-not-allowed' : 'bg-portfolio-purple text-white'}`}
               >
                 Next
               </button>
@@ -141,14 +141,14 @@ const ResumeSection = () => {
               <Document
                 file="/sample-resume.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
-                loading={<div className="text-center py-10">Loading resume...</div>}
-                error={<div className="text-center py-10 text-red-500">Failed to load PDF. Please try again later.</div>}
+                loading={<div className="text-center py-10 text-lg md:text-xl">Loading resume...</div>}
+                error={<div className="text-center py-10 text-red-500 text-lg md:text-xl">Failed to load PDF. Please try again later.</div>}
               >
                 <Page 
                   pageNumber={pageNumber} 
                   renderTextLayer={false}
                   renderAnnotationLayer={false}
-                  width={window.innerWidth > 768 ? 600 : 300}
+                  width={window.innerWidth > 768 ? (window.innerWidth > 1280 ? 800 : 600) : 300}
                 />
               </Document>
             </div>

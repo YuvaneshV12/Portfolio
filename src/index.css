@@ -76,10 +76,17 @@
   body {
     @apply bg-portfolio-dark text-foreground;
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
   }
   
   html {
     scroll-behavior: smooth;
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      font-size: 18px;
+    }
   }
 }
 
@@ -93,7 +100,7 @@
 }
 
 .nav-link {
-  @apply relative text-white opacity-70 hover:opacity-100 transition-all;
+  @apply relative text-white opacity-70 hover:opacity-100 transition-all text-base md:text-lg;
 }
 
 .nav-link::after {
@@ -146,5 +153,5 @@
 }
 
 .social-icon {
-  @apply text-white opacity-70 hover:opacity-100 hover:text-portfolio-purple transition-all duration-300;
+  @apply text-white opacity-70 hover:opacity-100 hover:text-portfolio-purple transition-all duration-300 text-xl md:text-2xl;
 }

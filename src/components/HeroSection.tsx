@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center pt-16"
+      className="min-h-screen flex items-center pt-16 md:pt-20"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse md:flex-row items-center">
@@ -16,15 +16,15 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 md:mb-6">
               <motion.div
-                className="h-1 w-6 bg-portfolio-purple mr-4"
+                className="h-1 md:h-2 w-6 md:w-10 bg-portfolio-purple mr-4"
                 initial={{ width: 0 }}
                 animate={{ width: 24 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               ></motion.div>
               <motion.h2 
-                className="text-xl text-portfolio-purple"
+                className="text-xl md:text-2xl lg:text-3xl text-portfolio-purple"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
               </motion.h2>
             </div>
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
@@ -42,7 +42,7 @@ const HeroSection = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-xl"
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 md:mb-10 max-w-xl lg:max-w-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -54,6 +54,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
+              className="flex flex-col md:flex-row gap-4 md:gap-6"
             >
               <Link 
                 to="contact" 
@@ -61,7 +62,7 @@ const HeroSection = () => {
                 smooth={true} 
                 duration={800} 
                 offset={-50}
-                className="bg-portfolio-purple text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block mr-4"
+                className="bg-portfolio-purple text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl"
               >
                 Contact Me
               </Link>
@@ -71,7 +72,7 @@ const HeroSection = () => {
                 smooth={true}
                 duration={800}
                 offset={-50}
-                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-3 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block mt-4 md:mt-0"
+                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-4 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block text-lg md:text-xl"
               >
                 View My Work
               </Link>

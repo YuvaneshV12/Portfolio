@@ -53,21 +53,21 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0D1320]">
+    <section id="contact" className="py-20 md:py-28 lg:py-32 bg-[#0D1320]">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-2xl font-semibold mb-2 text-portfolio-purple">GET IN TOUCH</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-4">Contact.</h3>
-          <div className="h-1 w-20 bg-portfolio-purple mx-auto"></div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-3 text-portfolio-purple">GET IN TOUCH</h2>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Contact.</h3>
+          <div className="h-1 md:h-2 w-20 md:w-24 bg-portfolio-purple mx-auto"></div>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16">
           <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, x: -30 }}
@@ -76,43 +76,43 @@ const ContactSection = () => {
             transition={{ duration: 0.5 }}
           >
             <form onSubmit={handleSubmit}>
-              <div className="mb-6">
-                <label htmlFor="name" className="block text-white mb-2">Your Name</label>
+              <div className="mb-6 md:mb-8">
+                <label htmlFor="name" className="block text-white mb-2 md:mb-3 text-lg md:text-xl">Your Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
+                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 md:px-6 py-3 md:py-4 text-white text-lg focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
                   placeholder="What's your name?"
                   required
                 />
               </div>
               
-              <div className="mb-6">
-                <label htmlFor="email" className="block text-white mb-2">Your Email</label>
+              <div className="mb-6 md:mb-8">
+                <label htmlFor="email" className="block text-white mb-2 md:mb-3 text-lg md:text-xl">Your Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
+                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 md:px-6 py-3 md:py-4 text-white text-lg focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
                   placeholder="What's your email?"
                   required
                 />
               </div>
               
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-white mb-2">Your Message</label>
+              <div className="mb-6 md:mb-8">
+                <label htmlFor="message" className="block text-white mb-2 md:mb-3 text-lg md:text-xl">Your Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
+                  className="w-full bg-[#1A1E2E] border border-gray-700 rounded-lg px-4 md:px-6 py-3 md:py-4 text-white text-lg focus:outline-none focus:ring-2 focus:ring-portfolio-purple"
                   placeholder="What do you want to say?"
                   required
                 ></textarea>
@@ -121,13 +121,13 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`bg-portfolio-purple text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                className={`bg-portfolio-purple text-white px-8 py-4 rounded-lg font-medium hover:bg-opacity-90 transition-all text-lg md:text-xl ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
               
               {submitResult && (
-                <div className={`mt-4 p-3 rounded-lg ${submitResult.success ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
+                <div className={`mt-4 p-4 rounded-lg text-lg ${submitResult.success ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
                   {submitResult.message}
                 </div>
               )}
@@ -148,39 +148,39 @@ const ContactSection = () => {
                 className="w-full h-full object-cover rounded-xl opacity-70"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-6">
-                  <h3 className="text-2xl font-bold mb-4">Let's work together</h3>
-                  <p className="text-gray-300 mb-6">
+                <div className="text-center p-6 md:p-10">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Let's work together</h3>
+                  <p className="text-gray-300 text-lg md:text-xl mb-6 md:mb-8">
                     I'm currently available for freelance work or full-time positions.
                     If you have a project that needs some creative work, I'm ready to help!
                   </p>
-                  <div className="flex justify-center space-x-6">
+                  <div className="flex justify-center space-x-6 md:space-x-8">
                     <a 
                       href="https://linkedin.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="social-icon text-2xl"
+                      className="social-icon text-2xl md:text-3xl"
                       aria-label="LinkedIn"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
                     <a 
                       href="https://github.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="social-icon text-2xl"
+                      className="social-icon text-2xl md:text-3xl"
                       aria-label="GitHub"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
                     </a>
                     <a 
                       href="https://instagram.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="social-icon text-2xl"
+                      className="social-icon text-2xl md:text-3xl"
                       aria-label="Instagram"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
                     </a>
                   </div>
                 </div>

@@ -52,20 +52,20 @@ const AchievementsSection = () => {
   ];
 
   return (
-    <section id="achievements" className="py-20 bg-[#0D1320]">
+    <section id="achievements" className="py-20 md:py-28 lg:py-32 bg-[#0D1320]">
       <div className="container mx-auto px-4">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 md:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             <span className="text-portfolio-purple">Projects</span>
           </h2>
-          <div className="h-1 w-20 bg-portfolio-purple mx-auto mb-8"></div>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+          <div className="h-1 md:h-2 w-20 md:w-24 bg-portfolio-purple mx-auto mb-8 md:mb-10"></div>
+          <p className="text-gray-300 max-w-3xl lg:max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl">
             Following projects showcases my skills and experience through real-world examples of 
             my work. Each project is briefly described with links to code repositories and live demos in 
             it. It reflects my ability to solve complex problems, work with different technologies, and 
@@ -73,7 +73,7 @@ const AchievementsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {achievements.map((achievement, index) => (
             <motion.div 
               key={index}
@@ -84,19 +84,19 @@ const AchievementsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="p-1">
-                <div className="bg-[#1A1E2E] p-4 rounded-lg h-full">
-                  <div className="overflow-hidden rounded-lg mb-4">
+                <div className="bg-[#1A1E2E] p-4 md:p-6 rounded-lg h-full">
+                  <div className="overflow-hidden rounded-lg mb-4 md:mb-6">
                     <img 
                       src={achievement.image} 
                       alt={achievement.title} 
-                      className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110" 
+                      className="w-full h-48 md:h-56 lg:h-64 object-cover transition-transform duration-300 hover:scale-110" 
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
-                  <p className="text-gray-400">{achievement.description}</p>
-                  <div className="mt-4 flex justify-between">
-                    <a href="#" className="text-portfolio-purple hover:underline">Code</a>
-                    <a href="#" className="text-portfolio-cyan hover:underline">Live Demo</a>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-2 md:mb-3">{achievement.title}</h3>
+                  <p className="text-gray-400 text-base md:text-lg">{achievement.description}</p>
+                  <div className="mt-4 md:mt-6 flex justify-between">
+                    <a href="#" className="text-portfolio-purple hover:underline text-base md:text-lg">Code</a>
+                    <a href="#" className="text-portfolio-cyan hover:underline text-base md:text-lg">Live Demo</a>
                   </div>
                 </div>
               </div>
