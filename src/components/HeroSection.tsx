@@ -85,8 +85,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-              alt="Coding Environment" 
+              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326197.png" 
+              alt="Yuvanesh's Setup" 
               className="max-w-full h-auto rounded-xl shadow-2xl"
             />
           </motion.div>

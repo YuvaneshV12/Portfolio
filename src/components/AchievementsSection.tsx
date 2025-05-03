@@ -11,42 +11,42 @@ const AchievementsSection = () => {
   const achievements: Achievement[] = [
     {
       title: "Car Rent",
-      image: "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Web-based platform that allows users to search, book, and manage car rentals from various providers."
     },
     {
       title: "Job IT",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Web application that enables users to search for job openings, view estimated salaries, and locate available jobs based on their location."
     },
     {
       title: "Trip Guide",
-      image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations."
     },
     {
       title: "E-Commerce Platform",
-      image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Online shopping platform with customer and admin dashboards, payment integration, and order tracking."
     },
     {
       title: "Fitness App",
-      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Mobile application for workout tracking, nutrition planning, and progress visualization."
     },
     {
       title: "Movie Database",
-      image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Web application that provides information about movies, TV shows, and actors using external APIs."
     },
     {
       title: "Weather Dashboard",
-      image: "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Real-time weather forecast app with location detection and 7-day predictions."
     },
     {
       title: "Chat Application",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Real-time messaging platform with user authentication, notifications, and file sharing."
     }
   ];
