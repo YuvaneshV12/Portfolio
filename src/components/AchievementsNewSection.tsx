@@ -11,17 +11,17 @@ const AchievementsNewSection = () => {
   const achievements: Achievement[] = [
     {
       title: "Solved LeetCode Problems",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22b.png",
+      image: "https://i.ibb.co/xqyyxHy7/b8225408-20cc-4164-83c9-f8e24514e22b.png",
       description: "Solved LeetCode problems to strengthen data structures and algorithms skills through hands-on coding challenges."
     },
     {
       title: "Secured Thrid Price in Code-A-Thon",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22v.jpg",
+      image: "https://i.ibb.co/zWqQZWh7/b8225408-20cc-4164-83c9-f8e24514e22v.jpg",
       description: "Secured third place in Code-A-Thon by building an innovative and efficient solution under time constraints."
     },
     {
       title: "Earned a Java Completion Certificate",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22i.png",
+      image: "https://i.ibb.co/tpZfQy7t/b8225408-20cc-4164-83c9-f8e24514e22i.png",
       description: "Earned a Java completion certificate by mastering core concepts and building hands-on projects."
     }
   ];

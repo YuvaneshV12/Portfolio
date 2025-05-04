@@ -143,7 +143,7 @@ const ContactSection = () => {
           >
             <div className="relative h-full">
               <img 
-                src="/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22c.jpg" 
+                src="https://i.ibb.co/5WKMXLfc/b8225408-20cc-4164-83c9-f8e24514e22c.jpg" 
                 alt="3D Sphere" 
                 className="w-full h-full object-cover rounded-xl opacity-70"
               />

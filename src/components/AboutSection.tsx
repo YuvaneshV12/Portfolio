@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { name: "Web Developer", icon: "public/lovable-uploads/886b5595-2812-4d9c-afe2-281e94580ad5.png" },
-    { name: "React Native Developer", icon: "public/lovable-uploads/a444911e-9ebc-48dc-8cd6-d8b5a981eb19.png" },
-    { name: "Backend Developer", icon: "public/lovable-uploads/054ce4e3-e6b9-4e4c-aa4a-3f4d03a63acf.png" },
-    { name: "Problem Solver", icon: "public/lovable-uploads/65a20eee-c072-4cac-96df-58aaf08b20d1.png" },
+    { name: "Web Developer", icon: "https://i.ibb.co/M5yvtGCB/886b5595-2812-4d9c-afe2-281e94580ad5.png" },
+    { name: "React Native Developer", icon: "https://i.ibb.co/6JrnQ8rx/a444911e-9ebc-48dc-8cd6-d8b5a981eb19.png" },
+    { name: "Backend Developer", icon: "https://i.ibb.co/rR8TZ3yt/054ce4e3-e6b9-4e4c-aa4a-3f4d03a63acf.png" },
+    { name: "Problem Solver", icon: "https://i.ibb.co/QjnHyrFW/65a20eee-c072-4cac-96df-58aaf08b20d1.png" },
   ];
 
   return (

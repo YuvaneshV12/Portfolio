@@ -11,17 +11,17 @@ const AchievementsSection = () => {
   const achievements: Achievement[] = [
     {
       title: "Carbon FootPrint Tracker for Sustainable Living",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22o.png",
+      image: "https://i.ibb.co/MwNgpTH/b8225408-20cc-4164-83c9-f8e24514e22o.png",
       description: "Developed a web-based Carbon Footprint Tracker that calculates and visualizes users' daily emissions to promote eco-friendly habits."
     },
     { 
       title: "USSD Based Grocery Ordering Application",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22p.jpg",
+      image: "https://i.ibb.co/tPBG80s2/b8225408-20cc-4164-83c9-f8e24514e22p.jpg",
       description: "Developed a USSD-based grocery ordering application, enabling users to browse, order, and pay for groceries through simple text commands on feature phones."
     },
     {
       title: "Social Volunteering Platform for Community Engagement",
-      image: "public/lovable-uploads/b8225408-20cc-4164-83c9-f8e24514e22l.avif",
+      image: "https://i.ibb.co/VYpS7GWR/b8225408-20cc-4164-83c9-f8e24514e22l.jpg",
       description: "Created a social volunteering platform that connects volunteers with local community projects, allowing users to discover opportunities, sign up, and track their volunteer hours."
     }
   ];

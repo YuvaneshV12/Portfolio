@@ -24,7 +24,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.5, duration: 0.5 }}
               ></motion.div>
               <motion.h2 
-                className="text-xl md:text-2xl lg:text-3xl text-portfolio-purple"
+                className="ml-4 md:ml-8 text-[30px] text-portfolio-purple"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
               </motion.h2>
             </div>
             <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 ml-2 md:ml-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
@@ -42,7 +42,7 @@ const HeroSection = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
+              className="text-base md:text-lg lg:text-xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify ml-4 md:ml-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
+              className="text-base md:text-lg lg:text-xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify ml-4 md:ml-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.5 }}
@@ -60,7 +60,7 @@ const HeroSection = () => {
             </motion.p>
             
             <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify"
+              className="text-base md:text-lg lg:text-xl text-gray-300 mb-4 md:mb-5 max-w-xl lg:max-w-2xl text-justify ml-4 md:ml-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.4, duration: 0.5 }}
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 smooth={true} 
                 duration={800} 
                 offset={-50}
-                className="bg-portfolio-purple text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl"
+                className="bg-portfolio-purple text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition-all inline-block text-lg md:text-xl ml-4 md:ml-8 mb-4 md:mb-5"
               >
                 Contact Me
               </Link>
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 smooth={true}
                 duration={800}
                 offset={-50}
-                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-4 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block text-lg md:text-xl"
+                className="bg-transparent border border-portfolio-purple text-portfolio-purple px-8 py-4 rounded-full font-medium hover:bg-portfolio-purple/10 transition-all inline-block text-lg md:text-xl ml-4 md:ml-0 mb-4 md:mb-5"
               >
                 View My Work
               </Link>
@@ -104,8 +104,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <img 
-              src="public/lovable-uploads/c9b6b078-7269-4dfd-8279-9c7493326198.png" 
-              alt="Yuvanesh's Setup" 
+              src="https://i.ibb.co/ZzCfkfZN/c9b6b078-7269-4dfd-8279-9c7493326198.png" 
+              alt="Yuvanesh's PC" 
               className="max-w-full h-auto rounded-xl shadow-2xl"
             />
           </motion.div>
